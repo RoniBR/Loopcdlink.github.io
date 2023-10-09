@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Preguntas Frecuentes - Agencia OnlyFans</title>
+    <link rel="stylesheet" href="faq.css" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+  </head>
+  <body>
+    <style>
+      /* Estilos generales */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: calc(100vh - 300px);
+        padding-bottom: 150px; /* Espacio para el footer */
+      }
+      .container-preguntas-frecuentes {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 20px;
+        background-color: #f1f1f1;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .container-preguntas-frecuentes h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      /* Estilos de las preguntas */
+      .pregunta {
+        cursor: pointer;
+        padding: 10px;
+        background-color: #edb0b0;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+      }
+
+      .pregunta:hover {
+        background-color: #ea8282;
+      }
+
+      .pregunta i {
+        margin-right: 10px;
+      }
+
+      .pregunta span {
+        flex-grow: 1;
+      }
+
+      /* Estilos de las respuestas */
+      .respuesta {
+        display: none;
+        background-color: #f2f2f2;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+
+      .respuesta-visible {
+        display: block;
+      }
+      .indicador {
+        background: #ea8282;
+      }
+    </style>
+    <div class="container">
+      <div class="container-preguntas-frecuentes">
+        <h1>Preguntas Frecuentes</h1>
+
+        <div class="pregunta" onclick="mostrarRespuesta(1)">
+          <span>¿Tengo Que Pagar Para Ser Modelo Only Agencia?</span>
+        </div>
+        <div class="respuesta" id="respuesta1">
+          No, no tienes que pagar nada. La inscripción es gratis. Sin embargo,
+          llevamos una comisión mensual.
+        </div>
+
+        <div class="pregunta" onclick="mostrarRespuesta(2)">
+          <span>¿Qué Tendré Que Hacer Yo?</span>
+        </div>
+        <div class="respuesta" id="respuesta2">
+          Solo tienes que encargar de la creacion de forma activa. Es lo único
+          que te pedimos. Del resto, nos encargamos nosotros (marketing,
+          moderacion de mesanajes, edicion fotos y videos...etc.).
+        </div>
+
+        <div class="pregunta" onclick="mostrarRespuesta(3)">
+          <span>¿Cuanto Puedo Ganar Al Mes?</span>
+        </div>
+        <div class="respuesta" id="respuesta3">
+          En promedio las modelos cobran $2700 al mes. Empezando de cero, puedes
+          ganar entre 500$ y 1500$ durante los 3 primeros meses. Todo depende
+          del contenido que elijas publicar, tu disponibilidad y tu compromiso.
+        </div>
+
+        <div class="pregunta" onclick="mostrarRespuesta(4)">
+          <span>¿Como Me Podeis Asegurar Resultados?</span>
+        </div>
+        <div class="respuesta" id="respuesta4">
+          Como expertos en marketing digital y gestión de OnlyFans, respaldamos
+          nuestra experiencia implementando estrategias efectivas. Si, en el
+          improbable caso de que el rendimiento sea muy bajo durante un período
+          de 90 días, ofrecemos la opción de cancelar el proceso según lo desee.
+          Su satisfacción y éxito son nuestra prioridad.
+        </div>
+        <div class="pregunta" onclick="mostrarRespuesta(5)">
+          <span
+            >¿Adonde Se Destinan Los Ingresos Que Obtengo Con Onlyfans?</span
+          >
+        </div>
+        <div class="respuesta" id="respuesta5">
+          Se Destinan A Su Cuenta Bancaria O Al Medio De Pago Que Este Asociado
+        </div>
+        <div class="pregunta" onclick="mostrarRespuesta(6)">
+          <span>¿Cuales Son Los Requisitos?</span>
+        </div>
+        <div class="respuesta" id="respuesta6">
+          Antes de todo, tiene que ser mayor de edad y cumplir con las politicas
+          de la agencia.
+        </div>
+        <div class="pregunta" onclick="mostrarRespuesta(7)">
+          <span>¿Que Tipo De Contenido Puedo Subir?</span>
+        </div>
+        <div class="respuesta" id="respuesta7">
+          Puedes subir el contenido que deseas, pero al no tener restriciones se
+          puede subir contenido herotico
+        </div>
+        <div class="pregunta" onclick="mostrarRespuesta(8)">
+          <span>¿Cuanto Dura El Contrato?</span>
+        </div>
+        <div class="respuesta" id="respuesta8">
+          Tiene una duracion de 6 meses.
+        </div>
+        <div class="pregunta" onclick="mostrarRespuesta(9)">
+          <span>¿Mi Privicidad?</span>
+        </div>
+        <div class="respuesta" id="respuesta9">
+          Tu privacidad es nuestra máxima prioridad. Mantendremos tus datos de
+          forma segura y solo compartiremos la información que tú decidas y
+          autorices. Nos comprometemos a proteger tu privacidad y a seguir las
+          mejores prácticas en cuanto a la seguridad de los datos. Puedes
+          confiar en nosotros para mantener tus datos confidenciales y
+          utilizarlos únicamente de acuerdo con tus preferencias.
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Función para mostrar/ocultar las respuestas al hacer clic en una pregunta
+      function mostrarRespuesta(id) {
+        var respuesta = document.getElementById("respuesta" + id);
+        respuesta.classList.toggle("respuesta-visible");
+      }
+    </script>
+  </body>
+</html>

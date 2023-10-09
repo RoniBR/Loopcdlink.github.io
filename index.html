@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LoopLink</title>
+    <link rel="stylesheet" href="navbar.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container-navbar">
+      <div class="navbar">
+        <ul>
+          <li class="list active">
+            <a href="principal.html">
+              <span class="icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="contact.html">
+              <span class="icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="faq.html">
+              <span class="icon">
+                <ion-icon name="help-outline"></ion-icon>
+              </span>
+            </a>
+          </li>
+          <!-- <li class="list">
+            <a href="comunity.html">
+              <span class="icon">
+                <ion-icon name="people-outline"></ion-icon>
+              </span>
+            </a>
+          </li> -->
+          <div class="indicador"></div>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div id="main-content"></div>
+    </div>
+
+    <script>
+      function loadPage(url) {
+        $.ajax({
+          url: url,
+          dataType: "html",
+          success: function (response) {
+            $(".content-wrapper").html(response);
+          },
+          error: function () {
+            console.log("Error al cargar la página");
+          },
+        });
+      }
+
+      const list = document.querySelectorAll(".list");
+      function activeLink(event) {
+        event.preventDefault(); // Evita que se recargue la página al hacer clic en el enlace
+        list.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
+        const pageUrl = this.querySelector("a").getAttribute("href");
+        loadPage(pageUrl); // Llama a la función loadPage con la URL de la página
+      }
+      list.forEach((item) => item.addEventListener("click", activeLink));
+
+      // Carga la página principal al cargar la página
+      $(document).ready(function () {
+        const initialPage = "principal.html";
+        loadPage(initialPage);
+      });
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

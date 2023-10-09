@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Estilos globales */
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #bed8d8;
+        overflow: hidden;
+      }
+
+      /* Redes Sociales */
+      .redes-sociales {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 0;
+      }
+
+      .content-red {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 150px;
+      }
+
+      .red {
+        flex: 1;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        text-decoration: none;
+        color: #333333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        transition: transform 0.2s;
+        min-width: 200px; /* Añadido para evitar que las tarjetas sean demasiado pequeñas */
+      }
+
+      .red:hover {
+        transform: scale(1.05);
+      }
+
+      .red a {
+        height: 200px;
+        text-decoration: none;
+        color: #333333;
+        transition: color 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+      }
+
+      .red a:hover {
+        color: #bf8f8f;
+      }
+
+      .red img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+
+      .red p {
+        font-size: 1.1rem;
+        color: #666666;
+        margin-bottom: 0;
+      }
+
+      /* Encabezado */
+      .invitacion {
+        text-align: center;
+        padding: 20px 150px 10px;
+      }
+
+      .invitacion h1 {
+        font-size: 2.5rem;
+        color: #fdfdfd;
+        margin-bottom: 10px;
+        text-shadow: -1px -1px 0 #666666,
+          /* Sombra arriba y a la izquierda */ 1px -1px 0 #666666,
+          /* Sombra arriba y a la derecha */ -1px 1px 0 #666666,
+          /* Sombra abajo y a la izquierda */ 1px 1px 0 #666666; /* Sombra abajo y a la derecha */
+      }
+
+      .intro-text {
+        font-size: 1.2rem;
+        color: #555555;
+        margin-bottom: 30px;
+      }
+      .indicador {
+        background: #bed8d8;
+      }
+
+      /* Media queries para dispositivos móviles */
+      @media (max-width: 767px) {
+        body {
+          overflow: scroll;
+        }
+        .invitacion {
+          padding: 50px;
+          font-size: 1.8rem;
+        }
+        .content-red {
+          padding: 8px;
+          padding-bottom: 150px;
+        }
+        .red {
+          flex: 1;
+          padding: 10px;
+          min-width: 150px;
+        }
+        .red img {
+          width: 60px;
+          height: 60px;
+        }
+        .red p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+    <title>Redes Sociales de la Agencia</title>
+  </head>
+  <body>
+    <section class="redes-sociales">
+      <div class="invitacion">
+        <h1>Conéctate con Nosotros</h1>
+        <p class="intro-text">
+          ¡Te invitamos a conectarte con nosotros en nuestras redes sociales!
+          Encuentra más información y mantente al tanto de nuestras novedades.
+        </p>
+      </div>
+      <div class="content-red">
+        <div class="red">
+          <a href="mailto:ronibermeo1@gmail.com">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Circle-icons-mail.svg"
+              alt="Correo Electrónico"
+            />
+            <p>Correo Electrónico</p>
+          </a>
+        </div>
+        <div class="red">
+          <a
+            href="https://instagram.com/sofia.foxy_?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D"
+            target="_blank"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/4138/4138124.png"
+              alt="Instagram"
+            />
+            <p>Instagram</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
